@@ -3,66 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная - Front</title>
+    <title>Главная - Front Ilja</title>
     <meta
       name="description"
-      content="Заглушка описания главной страницы сайта"
+      content="Сайт Смирнова Ильи"
     />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a href="/">Frontend</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="goods.html">Товары</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+    <div class="page-container">
+      <div class="logo" href="index.html">Frontend</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="services">
-        <h2>Информация об Авторе</h2>
+      </div>
+      <div class="content">
+      <div class="profile-header">
+        <h2 class="profile-title">Информация об Авторе</h2>
         <img
+          class="profile-photo"
           src="assets/images/Me.png"
           alt="Фото автора"
           width="200"
           height="250"
         />
-        <p>Смирнов Илья Сергеевич</p>
-        <p>ЭФБО-16-24</p>
-        <p>
-          Обо мне: Сначала был примерным мальчиком, а потооом... Продавал
-          разбавленное молоко, тыгыдыкал в 5 утра, убирал предметы со стола.
+        <div class="profile-name">Смирнов Илья Сергеевич</div>
+        <div class="profile-group">ЭФБО-16-24</div>
+        <div class="about-me">
+          Обо мне: у меня 2к часов в доте и 2к в прайме, очень добрый и позитивный,           
+            но не очень хочу с вами общаться
         </p>
-      </section>
-
-      <section>
-        <p>Навык 1</p>
-        <p>Навык 2</p>
-        <p>Навык 3</p>
-        <p>Навык 4</p>
-      </section>
-      <section>
-        <h2>Мой опыт работы</h2>
-        <p>Опыт 1</p>
-        <p>Опыт 2</p>
-        <p>Опыт 3</p>
-        <p>Опыт 4</p>
-      </section>
-      <section id="contacts">
-        <h2>Контактная информация</h2>
-        <p>Наши контакты...</p>
-        <a href="contacts.html">Подробнее</a>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Frontend Ilja. Все права защищены.</p>
-      <p>Телефон: +7 (985) 354-06-61</p>
-    </footer>
+      </div>
+      <div class="skills-container">
+        <div class="skill-tag">Ломаный французский</div>
+        <div class="skill-tag">Игрок в доту</div>
+        <div class="skill-tag">Хорошо запоминаю</div>
+      </div>
+      <div class="experience-section">
+        <h2 class="section-title">Мой опыт работы</h2>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 1</h3>
+          <p class="experience-desc">Был тестером кровати</p>
+        </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 2</h3>
+          <p class="experience-desc">Работал актёром</p>
+        </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Опыт 3</h3>
+          <p class="experience-desc">Главный специалист по прокрастинации.</p>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2025 Front Ilja. Все права защищены.</p>
+        <p>Телефон: +7 (985) 354-06-61</p>
+      </div>
+    </div>
   </body>
 </html>

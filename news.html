@@ -7,46 +7,74 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <title>О нас - Frontend Ilja</title>
+    <title>О нас - Front Ilja</title>
     <meta name="description" content="Узнайте больше новостей" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <a href="/">Frontend</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="goods.html">Товары</a></li>
+    <div class="page-container">
+      <div class="logo" href="index.html">Frontend</div>
+      <div class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <nav aria-label="Хлебные крошки">
-        <a href="index.html">Главная</a> →
-        <span>Новости</span>
-      </nav>
-      <h1>Новость 1</h1>
-      <section>
-        <h2>Заголовок новости 1</h2>
-        <p>Меня заставили</p>
-      </section>
-      <h1>Новость 2</h1>
-      <section>
-        <h2>Заголовок новости 2</h2>
-        <p>Меня заставили</p>
-      </section>
-      <h1>Новость 3</h1>
-      <section>
-        <h2>Заголовок новости 3</h2>
-        <p>Меня заставили</p>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Frontend Ilja. Все права защищены.</p>
-      <p>Телефон: +7 (985) 354-06-61</p>
-    </footer>
+      </div>
+      <div class="content">
+        <nav class="bread" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a> →
+          <span>Новости</span>
+        </nav>
+        <div class="news-container">
+          <div class="news-card">
+            <h2 class="news-title">И снова он, носок!</h2>
+            <p class="news-meta">
+              15.07.2025 19:00 | Автор: Газета “Бытовые тайны”
+            </p>
+            <p class="news-text">
+              Очередная трагедия — из пары носков вернулся только один.
+              Расследование продолжается, но эксперты уверены: вернуть беглеца
+              будет невозможно.
+            </p>
+          </div>
+          <div class="news-card">
+            <h2 class="news-title">
+              Скандал дня: Одеяло снова захватило всё пространство
+            </h2>
+            <p class="news-meta">
+              26.09.2025 12:00 | Автор: Корреспондент “Утренний храп”
+            </p>
+            <p class="news-text">
+              Сегодня ночью одеяло совершило беспрецедентную атаку, полностью
+              заняв территорию кровати.
+            </p>
+          </div>
+          <div class="news-card">
+            <h2 class="news-title">Задание выполнено!</h2>
+            <p class="news-meta">27.09.2025 22:20 | Автор: И.С.Смирнович</p>
+            <p class="news-text">
+              Сегодня вечером произошло событие, которое навсегда войдёт в
+              летописи продуктивности. Пользователь успешно выполнил задание,
+              несмотря на все преграды в виде чая, интернета и внезапных мыслей
+              “а может потом?”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2025 Front Ilja. Все права защищены.</p>
+        <p>Телефон: +7 (985) 354-06-61</p>
+      </div>
+    </div>
   </body>
 </html>
