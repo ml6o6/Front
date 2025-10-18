@@ -13,8 +13,8 @@
   </head>
   <body>
     <div class="page-container">
-      <div class="logo" href="index.html">Frontend</div>
-      <div class="nav">
+      <header class="logo" href="index.html">Frontend</header>
+      <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Главная</a>
@@ -29,14 +29,16 @@
             <a class="nav-link" href="contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-      <div class="content">
+      </nav>
+      <main class="content">
         <nav class="bread" aria-label="Хлебные крошки">
           <a href="index.html">Главная</a> →
           <span>Новости</span>
         </nav>
-        <div class="news-container">
-          <div class="news-card">
+
+        <section class="news-container" aria-labelledby="newsTitle">
+          <h1 id="newsTitle" class="section-title">Новости</h1>
+          <article class="news-card">
             <h2 class="news-title">И снова он, носок!</h2>
             <p class="news-meta">
               15.07.2025 19:00 | Автор: Газета “Бытовые тайны”
@@ -46,8 +48,8 @@
               Расследование продолжается, но эксперты уверены: вернуть беглеца
               будет невозможно.
             </p>
-          </div>
-          <div class="news-card">
+          </article>
+          <article class="news-card">
             <h2 class="news-title">
               Скандал дня: Одеяло снова захватило всё пространство
             </h2>
@@ -58,8 +60,8 @@
               Сегодня ночью одеяло совершило беспрецедентную атаку, полностью
               заняв территорию кровати.
             </p>
-          </div>
-          <div class="news-card">
+          </article>
+          <article class="news-card">
             <h2 class="news-title">Задание выполнено!</h2>
             <p class="news-meta">27.09.2025 22:20 | Автор: И.С.Смирнович</p>
             <p class="news-text">
@@ -68,9 +70,9 @@
               несмотря на все преграды в виде чая, интернета и внезапных мыслей
               “а может потом?”
             </p>
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </main>
       <div class="footer">
         <p>&copy; 2025 Front Ilja. Все права защищены.</p>
         <p>Телефон: +7 (985) 354-06-61</p>
