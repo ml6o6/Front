@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Заглушка контактов" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/styles.css" />
     <title>Контакты - Frontend</title>
-    <meta
-      name="description"
-      content="Узнайте больше о нашей компании и истории"
-    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <div class="page-container">
-      <header class="logo" href="index.html">Frontend</header>
+      <header class="logo" href="index.html">
+        Frontend
+        <div style="margin-top: 10px">
+          <button id="theme-toggle" class="theme-toggle__button">
+            Смена темы
+          </button>
+        </div>
+      </header>
+
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
@@ -32,11 +36,12 @@
           </li>
         </ul>
       </nav>
+
       <main class="content">
         <nav class="bread" aria-label="Хлебные крошки">
-          <a href="index.html">Главная</a> →
-          <span>Контакты</span>
+          <a href="index.html">Главная</a> → <span>Контакты</span>
         </nav>
+
         <section class="contacts-container" aria-labelledby="contactsTitle">
           <h1 id="contactsTitle" class="section-title">Контакты</h1>
 
@@ -55,17 +60,31 @@
           <section aria-labelledby="feedbackTitle" class="contact-info">
             <h2 id="feedbackTitle" class="contact-title">Обратная связь</h2>
             <p>
-              <button id="openDialog" type="button" class="contact-button">
+              <button
+                id="openDialog"
+                type="button"
+                class="contact-button"
+                onclick="document.getElementById('contactModal').showModal()"
+              >
                 Написать мне
               </button>
             </p>
 
-            <dialog id="contactDialog" aria-labelledby="dialogTitle">
-              <h3 id="dialogTitle">Связаться</h3>
-              <form id="contactForm" method="dialog" novalidate>
-                <p>
-                  <label for="name"
-                    >Имя*:<br />
+            <dialog id="contactModal" aria-labelledby="modalTitle">
+              <div class="modal-header">
+                <h2 id="modalTitle">Форма обратной связи</h2>
+              </div>
+              <div class="modal-content">
+                <form
+                  id="feedbackForm"
+                  method="dialog"
+                  novalidate
+                  onsubmit="event.preventDefault(); submitForm();"
+                >
+                  <div class="form-group">
+                    <label for="name"
+                      >Имя <span class="required">*</span></label
+                    >
                     <input
                       id="name"
                       name="name"
@@ -75,26 +94,12 @@
                       placeholder="Введите ваше имя"
                       autocomplete="given-name"
                     />
-                  </label>
-                </p>
+                  </div>
 
-                <p>
-                  <label for="email"
-                    >E-mail*:<br />
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      placeholder="example@mail.com"
-                      autocomplete="email"
-                    />
-                  </label>
-                </p>
-
-                <p>
-                  <label for="phone"
-                    >Телефон*:<br />
+                  <div class="form-group">
+                    <label for="phone"
+                      >Телефон <span class="required">*</span></label
+                    >
                     <input
                       id="phone"
                       name="phone"
@@ -102,185 +107,82 @@
                       placeholder="+7 (900) 000-00-00"
                       required
                       pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-                    /> </label
-                  ><br />
-                  <small>Формат: +7 (900) 000-00-00</small>
-                </p>
+                    />
+                    <small>Формат: +7 (900) 000-00-00</small>
+                  </div>
 
-                <p>
-                  <label for="topic"
-                    >Тема*:<br />
-                    <select id="topic" name="topic" required>
-                      <option value="">Выберите тему</option>
-                      <option>Вопрос</option>
-                      <option>Заказ</option>
-                      <option>Предложение</option>
+                  <div class="form-group">
+                    <label for="email"
+                      >Электронная почта <span class="required">*</span></label
+                    >
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="example@mail.ru"
+                      autocomplete="email"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="category"
+                      >Категория обращения
+                      <span class="required">*</span></label
+                    >
+                    <select id="category" name="category" required>
+                      <option value="">Выберите категорию</option>
+                      <option value="technical">Техническая поддержка</option>
+                      <option value="commercial">
+                        Коммерческое предложение
+                      </option>
+                      <option value="cooperation">Сотрудничество</option>
+                      <option value="complaint">Жалоба</option>
+                      <option value="suggestion">Предложение</option>
+                      <option value="other">Другое</option>
                     </select>
-                  </label>
-                </p>
+                  </div>
 
-                <p>
-                  <label for="message"
-                    >Сообщение*:<br />
+                  <div class="form-group">
+                    <label for="message"
+                      >Текст обращения <span class="required">*</span></label
+                    >
                     <textarea
                       id="message"
                       name="message"
-                      rows="5"
                       required
-                      placeholder="Напишите ваше сообщение..."
+                      placeholder="Опишите вашу проблему или вопрос..."
                     ></textarea>
-                  </label>
-                </p>
+                  </div>
 
-                <p>
-                  <button type="button" id="closeDialog" class="contact-button">
-                    Закрыть
-                  </button>
-                  <button type="submit" class="contact-button">
-                    Отправить
-                  </button>
-                </p>
-              </form>
+                  <div class="modal-actions">
+                    <button
+                      type="button"
+                      id="closeDialog"
+                      class="btn btn-secondary"
+                      onclick="document.getElementById('contactModal').close()"
+                    >
+                      Отмена
+                    </button>
+                    <button
+                      type="submit"
+                      id="submitForm"
+                      class="btn btn-primary"
+                    >
+                      Отправить
+                    </button>
+                  </div>
+                </form>
+              </div>
             </dialog>
           </section>
         </section>
       </main>
+
       <div class="footer">
         <p>&copy; 2025 Front Ilja. Все права защищены.</p>
         <p>Телефон: +7 (985) 354-06-61</p>
       </div>
     </div>
-    <dialog id="contactModal" aria-labelledby="modalTitle">
-      <div class="modal-header">
-        <h2 id="modalTitle">Форма обратной связи</h2>
-      </div>
-      <div class="modal-content">
-        <form id="feedbackForm" method="dialog" novalidate>
-          <div class="form-group">
-            <label for="name">Имя <span class="required">*</span></label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              minlength="2"
-              placeholder="Введите ваше имя"
-              autocomplete="given-name"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Телефон <span class="required">*</span></label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="+7 (900) 000-00-00"
-              required
-              pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-            />
-            <small>Формат: +7 (900) 000-00-00</small>
-          </div>
-
-          <div class="form-group">
-            <label for="email"
-              >Электронная почта <span class="required">*</span></label
-            >
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              placeholder="example@mail.ru"
-              autocomplete="email"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="category"
-              >Категория обращения <span class="required">*</span></label
-            >
-            <select id="category" name="category" required>
-              <option value="">Выберите категорию</option>
-              <option value="technical">Техническая поддержка</option>
-              <option value="commercial">Коммерческое предложение</option>
-              <option value="cooperation">Сотрудничество</option>
-              <option value="complaint">Жалоба</option>
-              <option value="suggestion">Предложение</option>
-              <option value="other">Другое</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message"
-              >Текст обращения <span class="required">*</span></label
-            >
-            <textarea
-              id="message"
-              name="message"
-              required
-              placeholder="Опишите вашу проблему или вопрос..."
-            ></textarea>
-          </div>
-
-          <div class="modal-actions">
-            <button type="button" id="closeDialog" class="btn btn-secondary">
-              Отмена
-            </button>
-            <button type="submit" id="submitForm" class="btn btn-primary">
-              Отправить
-            </button>
-          </div>
-        </form>
-      </div>
-    </dialog>
-
-    <script>
-      (function () {
-        const dialog = document.getElementById("contactModal");
-        const openBtn = document.getElementById("openDialog");
-        const closeBtn = document.getElementById("closeDialog");
-        const form = document.getElementById("feedbackForm");
-
-        // Открыть модалку
-        openBtn.addEventListener("click", () => dialog.showModal());
-
-        // Закрыть модалку
-        closeBtn.addEventListener("click", () => dialog.close());
-
-        // Закрытие по клику на фон
-        dialog.addEventListener("click", (e) => {
-          const rect = dialog.getBoundingClientRect();
-          const inside =
-            e.clientX >= rect.left &&
-            e.clientX <= rect.right &&
-            e.clientY >= rect.top &&
-            e.clientY <= rect.bottom;
-          if (!inside) dialog.close();
-        });
-
-        // Запрет submit по Enter вне textarea
-        form.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" && e.target.tagName !== "TEXTAREA")
-            e.preventDefault();
-        });
-
-        // «Отправка» формы (демо)
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-          }
-          const data = Object.fromEntries(new FormData(form).entries());
-          console.log("Данные формы:", data);
-          alert(
-            "Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время."
-          );
-          dialog.close();
-          form.reset();
-        });
-      })();
-    </script>
   </body>
 </html>

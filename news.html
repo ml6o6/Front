@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Заглушка Новостей" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/styles.css" />
     <title>О нас - Front Ilja</title>
     <meta name="description" content="Узнайте больше новостей" />
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <div class="page-container">
-      <header class="logo" href="index.html">Frontend</header>
+      <header class="logo" href="index.html">
+        Frontend
+        <div style="margin-top: 10px">
+          <button id="theme-toggle" class="theme-toggle__button">
+            Смена темы
+          </button>
+        </div>
+      </header>
+
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
@@ -30,6 +37,7 @@
           </li>
         </ul>
       </nav>
+
       <main class="content">
         <nav class="bread" aria-label="Хлебные крошки">
           <a href="index.html">Главная</a> →
@@ -38,6 +46,7 @@
 
         <section class="news-container" aria-labelledby="newsTitle">
           <h1 id="newsTitle" class="section-title">Новости</h1>
+
           <article class="news-card">
             <h2 class="news-title">И снова он, носок!</h2>
             <p class="news-meta">
@@ -49,6 +58,7 @@
               будет невозможно.
             </p>
           </article>
+
           <article class="news-card">
             <h2 class="news-title">
               Скандал дня: Одеяло снова захватило всё пространство
@@ -61,6 +71,7 @@
               заняв территорию кровати.
             </p>
           </article>
+
           <article class="news-card">
             <h2 class="news-title">Задание выполнено!</h2>
             <p class="news-meta">27.09.2025 22:20 | Автор: И.С.Смирнович</p>
@@ -73,6 +84,7 @@
           </article>
         </section>
       </main>
+
       <div class="footer">
         <p>&copy; 2025 Front Ilja. Все права защищены.</p>
         <p>Телефон: +7 (985) 354-06-61</p>

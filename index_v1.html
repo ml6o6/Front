@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная — Front Ilja</title>
+    <meta name="description" content="Сайт Смирнова Ильи" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header class="logo" href="index.html">
+        Frontend
+        <div style="margin-top: 10px">
+          <button id="theme-toggle" class="theme-toggle__button">
+            Смена темы
+          </button>
+        </div>
+      </header>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-current="page"
+              >Главная</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <article class="profile-header">
+          <h1 class="profile-title">Информация об авторе</h1>
+          <img
+            class="profile-photo"
+            src="assets/images/Me.png"
+            alt="Фотография автора сайта"
+            width="200"
+            height="250"
+          />
+          <h2 class="profile-name">Смирнов Илья Сергеевич</h2>
+          <p class="profile-group">ЭФБО-16-24</p>
+        </article>
+
+        <section class="about-me">
+          <h2>Обо мне</h2>
+          <p>
+            Обо мне: у меня 2к часов в доте и 2к в прайме, очень добрый и
+            позитивный, но не очень хочу общаться.
+          </p>
+        </section>
+
+        <section class="skills-container">
+          <div class="skill-tag">Ломаный французский</div>
+          <div class="skill-tag">Игрок в доту</div>
+          <div class="skill-tag">Хорошо запоминаю</div>
+        </section>
+
+        <section class="experience-section">
+          <h2 class="section-title">Мой опыт работы</h2>
+          <div class="experience-grid">
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 1</h3>
+              <p class="experience-desc">Был тестером кровати.</p>
+            </article>
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 2</h3>
+              <p class="experience-desc">Работал актёром.</p>
+            </article>
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 3</h3>
+              <p class="experience-desc">
+                Главный специалист по прокрастинации.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 Front Ilja. Все права защищены.</p>
+        <address>
+          Телефон: <a href="tel:+79853540661">+7 (985) 354-06-61</a>
+        </address>
+      </footer>
+    </div>
+  </body>
+</html>

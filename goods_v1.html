@@ -1,0 +1,93 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары - Front Ilja</title>
+    <meta name="description" content="Сайт Смирнова Ильи" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="logo" href="index.html">
+        Frontend
+        <div style="margin-top: 10px">
+          <button id="theme-toggle" class="theme-toggle__button">
+            Смена темы
+          </button>
+        </div>
+      </header>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goods.html">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <nav class="bread" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a> → <span>Товары</span>
+        </nav>
+
+        <section aria-labelledby="goodsTitle">
+          <h1 id="goodsTitle" class="section-title">Каталог</h1>
+
+          <div class="goods-grid">
+            <article class="good-card">
+              <header><h2 class="good-name">RTX 3080</h2></header>
+              <img
+                class="good-photo"
+                src="assets/images/rtx.png"
+                alt="Видеокарта RTX 3080"
+                width="300"
+                height="200"
+              />
+              <p class="good-price">400$</p>
+            </article>
+
+            <article class="good-card">
+              <header><h2 class="good-name">Грибочек</h2></header>
+              <img
+                class="good-photo"
+                src="assets/images/mach.jpg"
+                alt="Статуэтка грибочек"
+                width="200"
+                height="250"
+              />
+              <p class="good-price">1$</p>
+            </article>
+
+            <article class="good-card">
+              <header><h2 class="good-name">Здоровье</h2></header>
+              <img
+                class="good-photo"
+                src="assets/images/heart.png"
+                alt="Иконка сердце"
+                width="200"
+                height="250"
+              />
+              <p class="good-price">Бесценно</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 Front ilja. Все права защищены.</p>
+        <p>Телефон: +7 (985) 354-06-61</p>
+      </footer>
+    </div>
+  </body>
+</html>
